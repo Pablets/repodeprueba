@@ -1,10 +1,25 @@
 body, html{
     height: 100%;
-    width: 100%;
+    width: 1920px;
     margin: 0;
     background-color: aquamarine;
 }
 div{
+    position: relative;
+    left: 500px;
+    z-index: 1;
     width: 50%;
     height: 50%;
 }
+ img{
+     position: fixed;
+     top: 0;
+     opacity: 0.5;
+     z-index: 10;
+ }
+ .rectangle1{
+     left: 116,12px;
+     bottom: 824,06px;
+     opacity: 0,5;
+ }
+
