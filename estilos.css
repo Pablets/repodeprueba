@@ -11,38 +11,66 @@ div{
 }
 
 .glow {
+    width: 100%;
     font-size: 80px;
-    color: #6c7c83;
+    color: #c0d5dd;
     text-align: center;
-    text-shadow: 0 0 10px #6c7c83;
+    /*text-shadow: 0 0 5px #e0eaeede;*/
     position:absolute;
-    z-index: 10;
+    margin: 0px;
+    z-index: 14;
     top: 200px;
+}
+h1 {
+    font-size: 80px;
+}
+h2 {
+    font-size: 40px;
 }
 
 .forma2{
     width: 1000px;
     height: 1000px;
     transform: rotate(45deg);
-    background-color: rgba(27, 112, 112, 0.842);
+    background-color: rgba(34, 170, 170, 0.719);
     position: relative;
     left: 600px;
     bottom: -600px;
     z-index: 9;
     overflow: hidden;
+    animation-name: example1;
+    animation-duration: 4s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
+@keyframes example1 {
+    0%      {transform:scale(1) rotate(45deg);}
+  100%      {transform:scale(1.06) rotate(45deg);}
+  }
+
+
 .forma1{
     width: 1300px;
     height: 1300px;
     transform: rotate(45deg);
-    background-color: rgba(27, 112, 112, 0.842);
+    background-color: rgba(34, 170, 170, 0.904);
     position: relative;
     top: -2000px;
     z-index: 8;
     overflow: hidden;
+    animation-name: example;
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
+@keyframes example {
+    0%      {transform:scale(1) rotate(45deg);}
+  100%      {transform:scale(0.95) rotate(45deg);}
+  }
 .animation{
-    filter: blur(2px);
+    filter: blur(3px);
     position: relative;
     top: 0px;
     left: 0px;
@@ -52,7 +80,21 @@ div{
     background-image: url(animacion2/BG.svg);
     background-size: cover;
     background-repeat: no-repeat;
-    /*background-color: rgb(3, 0, 29);*/
+    transform: scaleZ(-10);
+}
+
+.overlay{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 1920px;
+    height: 1080px;
+    z-index: 12;
+    background: rgb(0,0,0);
+    background: -moz-linear-gradient(45deg, rgba(0,0,0,0.7987570028011204) 0%, rgba(27,166,195,0.3841911764705882) 100%);
+    background: -webkit-linear-gradient(45deg, rgba(0,0,0,0.7987570028011204) 0%, rgba(27,166,195,0.3841911764705882) 100%);
+    background: linear-gradient(45deg, rgba(0,0,0,0.7987570028011204) 0%, rgba(27,166,195,0.3841911764705882) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#1ba6c3",GradientType=1);
 }
 .container{
     position: absolute;
